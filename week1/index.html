@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>What did your eat?</title>
+  </head>
+  <body ng-controller="LunchCheckController">
+    <p>What do you eat in lunch? Seperated items by comma. If you are using modern browsers(Firefox 3.5+, IE 9, Chrome 10, Safari 5.x), empty items will be removed.</p>
+    <input type="text" ng-model="lunch" style="border-color:{{lunch_color}}">
+    <button ng-click="eat()">Check If Too Much</button>
+    <p style="color:{{msg_color}}">{{message}}</p>
+  </body>
+</html>

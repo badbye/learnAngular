@@ -1,12 +1,11 @@
 <p ng-if="found.length && show">{{found.length}} items found</p>
-<div style="text-align:left;padding-left:200px">
+<div style="text-align:left">
     <ul>
         <li ng-repeat="item in found">
-            <span class="short_name">{{item.short_name}}:
-            </span>
+            <span class="short_name">{{item.short_name}}</span>
             <span class="description">{{item.description}}</span>
             <button ng-click="onRemove({index: $index})">Don't want this one!</button>
         </li>
     </ul>
-    <p ng-if="!found.length && show">Nothing found</p>
+    <div ng-transclude style="text-align:center;padding:0"></div>
 </div>

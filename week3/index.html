@@ -7,10 +7,12 @@
 </head>
 <body ng-app="NarrowItDownApp">
   <div ng-controller="NarrowItDownController as vm" style="text-align:center">
-    <input ng-model="vm.search" type="text" placeholder="search" style="width:200px">
+    <input ng-model="vm.search" type="text" placeholder="search" style="width:200px;height:30px">
     <button ng-click="vm.getMatchedMenuItems()">Narrow It Down For Me!</button>
-    <div ng-if="vm.loading">{{vm.loading}}</div>
-    <found-items found="vm.found" on-remove="vm.removeItem(index)" show="vm.show"></found-items>
+    <div ng-if="vm.loading" style="text-align:left;padding-left:200px">{{vm.loading}}</div>
+    <found-items found="vm.found" on-remove="vm.removeItem(index)" show="vm.show">
+      <p ng-if="!vm.found.length && vm.show">Nothing found</p>
+    </found-items>
   </div>
 </body>
 </html

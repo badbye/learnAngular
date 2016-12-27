@@ -50,7 +50,8 @@ function MenuSearchService($http, $filter){
 function FoundItems(){
   return {
     scope : {found: '<', onRemove: '&', show: '<'},
-    templateUrl: 'item.html'
+    templateUrl: 'item.html',
+    transclude: true
   }
 };
 

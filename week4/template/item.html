@@ -1,0 +1,18 @@
+<span>
+  <a ui-sref="home">Home</a> > <a ui-sref="categories">Categories</a> > {{$ctrl.values['category']['name']}}
+</span>
+
+<div style="padding-top: 20px">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+    <tr ng-repeat="cate in $ctrl.values['menu_items']">
+      <td>{{cate.name}}</td>
+      <td>{{cate.description}}</td>
+      <td>{{cate.price_large}}</td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,30 @@
+.home {
+  text-align: center;
+  padding-top:10%;
+}
+
+.home .uilink{
+  color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+  background: lightblue;
+  border:3px;
+  padding:5px;
+  font-size: 15px;
+}
+
+.uilink:hover{
+  background:pink;
+  font-size: 16px;
+  color: white;
+}
+
+a {
+  text-decoration:none;
+}
+
+.loading-icon {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}

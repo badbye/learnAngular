@@ -16,12 +16,15 @@ function SignupController(signupdata, $http) {
   this.$onInit = function () {
     reg.user = signupdata;
     reg.msg = '';
+    reg.save = Object.keys(reg.user).length > 0;
+    if (reg.save) reg.msg = 'Your information has been saved';
   }
 
   reg.submit = function () {
     reg.msg = '';
     $http.get(ApiPath + reg.user.favor + '.json').then(
       function (res) {
+        reg.save = true;
         reg.msg = 'Your information has been saved';
         reg.user.items = res.data;
       },

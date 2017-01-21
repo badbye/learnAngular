@@ -68,3 +68,11 @@ div.desc {
   margin:10px 5px 10px 5px;
   float:right;
 }
+
+button[disabled], html input[disabled]{
+  color:grey;
+}
+
+button, input, select, textarea {
+  color:red
+}

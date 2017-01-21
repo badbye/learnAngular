@@ -1,0 +1,23 @@
+<div ng-if="vm.user.items == undefined" style="text-align:center">
+  <p>Not Signed Up Yet. <a ui-sref="public.signup">Sign Up Now!</a></p>
+</div>
+
+<div ng-if="vm.user.items != undefined" >
+<div style="height:200px">
+  <div style="float:left; margin-left:30%;margin-right:5%">
+    <p>First name: {{vm.user.firstname}}</p>
+    <p>Last name: {{vm.user.lastname}}</p>
+    <p>Email: {{vm.user.email}}</p>
+    <p>Phone: {{vm.user.phone}}</p>
+    <p>Menu: {{vm.user.favor}}</p>
+ </div>
+
+  <div class="img" style="float:left">
+    <img ng-src="/images/menu/{{ vm.user.items.category_short_name }}/{{ vm.user.items.category_short_name + '.jpg' }}" alt="Ballade" width="160" height="160">
+    <div class="desc">
+      <span style="color:black">{{ vm.user.items.name }}</span>
+      {{ vm.user.items.description }}
+    </div>
+  </div>
+</div>
+</div>

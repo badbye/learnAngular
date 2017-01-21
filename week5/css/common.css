@@ -1,0 +1,70 @@
+.loading-indicator {
+    display: block;
+    width: 70px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 40%;
+    z-index: 100;
+    background-color: #FFF;
+}
+
+.loading-indicator img {
+    width: 70px;
+    background-color: #FFF;
+}
+
+.ui-view-placeholder {
+    margin-top: 60px;
+}
+
+.ng-touched.ng-valid {
+  border: 3px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 3px red solid;
+}
+
+.signup{
+  text-align: center;
+}
+
+.signup > input{
+  width: 300px;
+  margin-top: 10px;
+  color:black;
+}
+
+.signup > span{
+  font-size: 15px;
+}
+
+
+div.img {
+  margin:3px;
+  border:1px solid #bebebe;
+  height:auto;
+  width:auto;
+  float:left;
+  text-align:center;
+}
+
+div.img img{
+  display:inline;
+  margin:3px;
+  border:1px solid #bebebe;
+}
+
+div.img a:hover img {
+  border:1px solid #333333;
+}
+
+div.desc {
+  font-weight:normal;
+  width:150px;
+  font-size:12px;
+  margin:10px 5px 10px 5px;
+  float:right;
+}

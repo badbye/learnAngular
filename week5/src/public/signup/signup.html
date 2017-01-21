@@ -1,0 +1,66 @@
+<div>
+<form name="signupForm" novalidate class="signup">
+  <!-- firstname -->
+  <input type="text" name="firstname" placeholder="First name"
+    ng-model="reg.user.firstname"
+    minlength="1"
+    required>
+  </input>
+  <br>
+  <span
+    ng-if="(signupForm.firstname.$error.minlength || signupForm.firstname.$error.required) && signupForm.firstname.$touched">
+    firstname must be at least 1 characters long
+  </span>
+  <br>
+
+  <!-- last name -->
+  <input type="text" name="lastname" placeholder="Last name"
+    ng-model="reg.user.lastname"
+    minlength="1"
+    required>
+  <br>
+  <span
+    ng-if="(signupForm.lastname.$error.minlength || signupForm.lastname.$error.required) && signupForm.lastname.$touched">
+    lastname must be at least 1 characters long
+  </span>
+  <br>
+
+  <!-- email -->
+  <input type="email" name="email" placeholder="Email"
+    ng-model="reg.user.email"
+    required>
+    <br>
+  <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">
+    Must be a valid email address: handle@domain format
+  </span>
+  <br>
+
+  <!-- phone -->
+  <input type="text" name="phone" placeholder="Phone"
+    ng-model="reg.user.phone"
+    pattern="(\d{3})-(\d{3})-(\d{4})"
+    required>
+      <br>
+  <span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
+    Phone must be in the format ###-###-####.
+  </span>
+  <br>
+
+  <!-- menu -->
+  <input type="text" name="favor" placeholder="The menu number of your favorite dish"
+    ng-model="reg.user.favor"
+    required>
+      <br>
+  <span ng-if="signupForm.favor.$invalid && signupForm.favor.$touched">
+    You have to write the menu number of your favorite dish
+  </span>
+  <span ng-if="reg.msg">
+    {{reg.msg}}
+  </span>
+  <br>
+
+  <button
+    ng-disabled="signupForm.$invalid"
+    ng-click="reg.submit()">Submit</button>
+</form>
+</div>
